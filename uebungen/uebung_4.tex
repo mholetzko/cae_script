@@ -29,7 +29,7 @@
           & 
           \begin{minipage}{.5\textwidth}
           \begin{equation}
-            U_{out}=-\frac{R2}{R1}V_{1}
+            V_{out}=-\frac{R2}{R1}V_{1}
             \end{equation}
           \end{minipage} 
         \end{tabular}
@@ -289,7 +289,10 @@
 
           \begin{enumerate}
             \item Baut die Schaltung auf, dimensioniert sie so, dass Sie einen Verstärkungsfaktor
-            \item 
+            \item Verwendet die UniversalOpamp2 aus der vorherigen Übrung mit einer Versorgungsspannung von +/-12V
+            \item Verifiziert eure Schaltung und das \textbf{nicht-invertierende} Verhalten mit einer transienten Simulation von 0 - 50ms.
+            \item Wählt dabei eine ausreichend kleine Schrittweite
+            \item Wechselt die Simulationsart zum AC-Sweep und ermittelt die Grenzfrequenz
           \end{enumerate}
 
             \begin{table}[h!]
@@ -303,11 +306,10 @@
                     \ctikzset{bipoles/length=.6cm}
                     \draw
                     (0,0) node[op amp,yscale=-1](opamp){} 
-                    (opamp.+) to[short,-o] ++(-3,0) to [V=$v_1$] (-3.5,-0.5) to (-3.5,-0.5) node[ground]{}
-                    %(opamp.-) to[short] ++ (0,1.0) coordinate(X) to[R,l_=$R_2$] ++(2.25,0) -| (opamp.out)
-                    (opamp.-) to[short] ++ (0,-1.5) coordinate(X) to[R,l_=$R_1$] ++(0,-2) node[ground]{}
-                    (opamp.out) to[short] ++ (0,-0.5) coordinate(X){} to[R,l_=$R_2$] ++ (0,-1) coordinate(X){}
-                    (-0.5,-0.5) coordinate(X) to[short] ++ (1,-1) coordinate(X){}
+                    (opamp.+) to[short,-o] ++(-3,0) to [V=$v_1$] (-3.5,-3) to (-3.5,-2.75) node[ground]{}
+                    (opamp.-) to[short] ++ (0,-1.5) coordinate(X) to[R,l_=$R_1$] ++(0,-1) node[ground]{}
+                    (opamp.out) to[short] ++ (0,-0.5) coordinate(X){} to[R,l_=$R_2$] ++ (0,-1) coordinate(Y){}
+                    (0.5,-1.5) to[short] ++ (-1,0) {}
                     (opamp.out) to[short,*-o] ++ (0.5,0) node[right]{$v_{\rm out}$}
                     ;
                     \end{circuitikz} 
@@ -318,12 +320,57 @@
                 & 
                 \begin{minipage}{.5\textwidth}
                 \begin{equation}
-                  U_{out}=-\frac{R2}{R1}V_{1}
+                  V_{out}=(1+\frac{R2}{R1})V_{1}
                   \end{equation}
                 \end{minipage} 
               \end{tabular}
             
             \end{table}
+
+            Spoiler! - Die Lösungen folgen auf den folgenden Folien. Wenn sie sich nicht sicher sind, schauen Sie einfach nach.\newline\newline
+            Info! - Besonders die Analyse von Grenzfrequeznen ist für Ihre weitere Vorlesungzeit (Filter höhrerer Ordnung, EMV) hilfreich,
+            da Sie neben der simulativen Bestätigung Ihrer Schaltungen auch theoretische Rechenaufgaben simulieren und so Ihre Rechnung
+            verifizieren können.
             
             \end{tiny} \end{spacing}
            \end{frame}
+
+          \begin{frame}[t]{OPV Schaltungen - Lösung transient}
+
+              \begin{spacing}{0.9} \begin{tiny}
+                \begin{table}[h!]
+                \begin{tabular}{p{10cm}}
+                  \hline
+                  \textbf{Simulation und Analyse} \\
+                  \hline \\
+                  \begin{minipage}{\textwidth}
+                    \includegraphics[width=\linewidth]{pictures/analysis_7.png}
+                  \end{minipage} 
+                  \\
+                \end{tabular}
+      
+              \end{table}
+               
+              \end{tiny} \end{spacing}
+
+          \end{frame}
+
+          \begin{frame}[t]{OPV Schaltungen - Lösung Grenzfrequenz} 
+    
+              \begin{spacing}{0.9} \begin{tiny}
+                \begin{table}[h!]
+                \begin{tabular}{p{10cm}}
+                  \hline
+                  \textbf{Simulation und Analyse} \\
+                  \hline \\
+                  \begin{minipage}{\textwidth}
+                    \includegraphics[width=\linewidth]{pictures/bode_2.png}
+                  \end{minipage} 
+                  \\
+                \end{tabular}
+      
+              \end{table}
+               
+              \end{tiny} \end{spacing}
+
+          \end{frame}
