@@ -40,8 +40,8 @@
 
 
   Wenn man nur daran interessiert ist die grundsätzliche Funktionalität einer Schaltung zu verifizieren, kann man ideale
-  Bauelemente aus der LTSpice Bibliothek verwenden. Wie im obigen Beispiel benötigt z.B. der Operationsverstärker entgegen der Realität dann keine Spannungsversorgung.
-  Für einen idealen OPV bietet LTSpice das Bauelement \textbf{opamp} an, welches Ihr im Bauteileditor findet direkt über die Suche findet. \newline
+  Bauelemente aus der LTspice Bibliothek verwenden. Wie im obigen Beispiel benötigt z.B. der Operationsverstärker entgegen der Realität dann keine Spannungsversorgung.
+  Für einen idealen OPV bietet LTspice das Bauelement \textbf{opamp} an, welches Ihr im Bauteileditor findet direkt über die Suche findet. \newline
   \textbf{Wichtig:} Ihr müsst als Spice-Direktive jedoch noch ein zu verwendendes Model einbinden. (.lib opamp.sub)
     \end{tiny} \end{spacing}
     \begin{spacing}{0.9} \begin{tiny}
@@ -106,7 +106,7 @@
           & 
           \begin{minipage}{.5\textwidth}
           \begin{itemize}
-            \item Klickt auf \includegraphics[scale=0.3]{pictures/run.png} (run) und LTSpice startet die Simulation
+            \item Klickt auf \includegraphics[scale=0.3]{pictures/run.png} (run) und LTspice startet die Simulation
             \item Fügt nun die Eingangsspannung sowie die Ausgangsspannung der Schaltung als Messpunkte hinzu.
           \end{itemize}
           \end{minipage} 
@@ -179,8 +179,8 @@
 
         \begin{spacing}{0.6} \begin{tiny}
         Eine Kennzahl von Tief-/Hochpassfiltern ist ihre 3dB Grenzfrequenz $f_g$. Die Grenzfrequenz kann man analytisch, jedoch auch simulativ
-        über LTSpice bestimmen. Hierzu bietet LTSpice die Möglichkeit die Frequenz einer Schaltung zu variieren. Dies wird AC-Sweep genannt. 
-        Im Bode-Diagramm kann man den logarithmischen Verlauf der Amplitude über der Frequenz in LTSpice darstellen und 
+        über LTspice bestimmen. Hierzu bietet LTspice die Möglichkeit die Frequenz einer Schaltung zu variieren. Dies wird AC-Sweep genannt. 
+        Im Bode-Diagramm kann man den logarithmischen Verlauf der Amplitude über der Frequenz in LTspice darstellen und 
         somit einfach grafisch die Grenzfrequenz bestimmen indem man den Punkt heraussucht, bei dem die Amplitde um 3dB abgefallen ist.
         \end{tiny} \end{spacing}
   
@@ -220,7 +220,7 @@
             & 
             \begin{minipage}{.4\textwidth}
             \begin{itemize}
-              \item Klickt auf \includegraphics[scale=0.3]{pictures/run.png} (run) und LTSpice startet die Simulation
+              \item Klickt auf \includegraphics[scale=0.3]{pictures/run.png} (run) und LTspice startet die Simulation
               \item Fügt nun die Ausgangsspannung der Schaltung als Messpunkt hinzu.
               \item Im waveform viewer solltet ihr das Bode-Diagram mit Amplitude und Phase sehen.
             \end{itemize}
@@ -302,14 +302,12 @@
                     \scalebox{0.35}{
                   \centering
                   \begin{circuitikz}
-                    \ctikzset{bipoles/thickness=1}
-                    \ctikzset{bipoles/length=.6cm}
+                    \ctikzset{bipoles/length=1cm}
                     \draw
                     (0,0) node[op amp,yscale=-1](opamp){} 
-                    (opamp.+) to[short,-o] ++(-3,0) to [V=$v_1$] (-3.5,-3) to (-3.5,-2.75) node[ground]{}
-                    (opamp.-) to[short] ++ (0,-1.5) coordinate(X) to[R,l_=$R_1$] ++(0,-1) node[ground]{}
-                    (opamp.out) to[short] ++ (0,-0.5) coordinate(X){} to[R,l_=$R_2$] ++ (0,-1) coordinate(Y){}
-                    (0.5,-1.5) to[short] ++ (-1,0) {}
+                    (opamp.+) to[short,-o] ++ (-2,0) to [V=$v_1$] ++ (0,-3) to ++(0,0) node[ground] {}
+                    (opamp.-) to[short] ++ (0,-1.25) coordinate(X) to[R,l_=$R_1$] ++(0,-1) node[ground]{}
+                    (opamp.out) to[R,l_=$R_2$] ++ (0,-1.5) coordinate(Y) to[short] ++ (-1.7,0) coordinate(X){}
                     (opamp.out) to[short,*-o] ++ (0.5,0) node[right]{$v_{\rm out}$}
                     ;
                     \end{circuitikz} 

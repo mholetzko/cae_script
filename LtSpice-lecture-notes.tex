@@ -17,31 +17,31 @@
 
 %create with titlepage
 \title{Labor CAE - Einfuehrung in die Simulation elektrischer
-Schaltungen mit LTSpice (6 UE)}
+Schaltungen mit LTspice (6 UE)}
 \date{15.03.2020}
-\author{Andreas Schaefer - Matthias Holetzko - Franz Smagacz-Allramseder}
+\author{Andreas Schaefer - Matthias Holetzko}
 \institute{Duale Hochschule Baden-Württemberg  \newline -- \newline Fakultät Technik \newline Studiengang Mechatronik}
 
 
 %begin the document
 \begin{document}
   \maketitle
-  \section{Introduction to LTSpice}
+  \section{Introduction to LTspice}
   
   %slides == frames
-  \begin{frame}{Was ist LTSpice - Historisches}
- \textbf{Schaltungssimulation mit LTSpice}\newline
+  \begin{frame}{Was ist LTspice - Historisches}
+ \textbf{Schaltungssimulation mit LTspice}\newline
  \begin{enumerate}
- \item Viele Programme zur elektrischen Schaltungssimulation beruhen auf einem Spice Kernel,
- \item SPICE bedeutet: Simulation Program with Integrated Circuit Emphasis,
- \item SPICE wurde 1973 an der University of California at Berkeley. entwickelt,
- \item SPICE ist eine “open source” Software (kostenlos) Software.
+ \item Viele Programme zur elektrischen Schaltungssimulation beruhen auf einem Spice Kernel
+ \item SPICE bedeutet: Simulation Program with Integrated Circuit Emphasis
+ \item SPICE wurde 1973 an der University of California at Berkeley. entwickelt
+ \item SPICE ist eine “open source” Software (kostenlos)
  \end{enumerate}
  \end{frame}
   
- \begin{frame}[fragile]{Was ist LTSpice - Wie funktioniert eine Simulation?}
+ \begin{frame}[fragile]{Was ist LTspice - Wie funktioniert eine Simulation?}
 	
-	In einem klassischen SPICE Program erfolgt die Eingabe der Schaltung über eine
+	In einem klassischen SPICE Programm erfolgt die Eingabe der Schaltung über eine
 	Netzliste.
 \begin{center}
 \includegraphics[scale=0.5]{pictures/page1.jpg}
@@ -49,17 +49,17 @@ Schaltungen mit LTSpice (6 UE)}
 
 	Eine Netzliste repräsentiert eine Schaltung entsprechend Knoten- und Maschenregel, \newline Viele moderne SPICE Simulationsprogramme
 	bieten dem Nutzer jedoch eine grafische Bedienoberfläche. 
-	So auch das in diesem Labor verwendete Programm, \textbf{LTSpice XVII}. 
+	So auch das in diesem Labor verwendete Programm, \textbf{LTspice XVII}. 
 
 
   \end{frame}
   
-   \begin{frame}[fragile]{Was ist LTSpice - Installation \& Features}
-	
+   \begin{frame}[fragile]{Was ist LTspice - Installation \& Features}
+	Die folgenden Punkte sind eingebettete Hyperlinks:
 	\begin{enumerate}
-\item \href{https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html}{Hier findet Ihr alle Infos vom Hersteller, \textbf{analog devices}}.
-\item \href{http://ltspice.analog.com/software/LTspice.dmg}{Installer fuer MacOs http://ltspice.analog.com/software/LTspice.dmg}.
-\item \href{http://ltspice.analog.com/software/LTspice.dmg}{Installer fuer MacOs http://ltspice.analog.com/software/LTspice.dmg}.
+\item \href{https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html}{Hier findet Ihr alle Infos vom Hersteller, \textbf{analog devices}}
+\item \href{http://ltspice.analog.com/software/LTspice.dmg}{Installer fuer MacOs http://ltspice.analog.com/software/LTspice.dmg}
+\item \href{http://ltspice.analog.com/software/LTspiceXVII.exe}{Installer fuer Windows http://ltspice.analog.com/software/LTspiceXVII.exe}
 	\end{enumerate}
 	
 \begin{center}
@@ -80,25 +80,24 @@ source=pictures/LTspiceOverview.mp4
  \begin{frame}[fragile]{Ziel dieser Laborübung}
 
 \begin{enumerate}
-\item Erarbeiten der Grundlagen zur Simulation mit LTSpice XVII,
-\item Eigenständige Simulation von Schaltungen für Studien-/Abschlussarbeiten,
-\item Verständnis theoretischer Inhalte mit empirischen Simulationen ergänzen.
+\item Erarbeiten der Grundlagen zur Simulation mit LTspice XVII
+\item Eigenständige Simulation von Schaltungen für Studien-/Abschlussarbeiten
+\item Verständnis theoretischer Inhalte mit empirischen Simulationen ergänzen
 \end{enumerate}
 
 \textbf{nächste Schritte}
 
 \begin{itemize}
-\item Übungen zum Einstieg in die Simulationswelt,
-\item Schrittweise Erarbeitung eines Kleinprojektes \newline \textbf{Simulation einer Temperaturmessbrücke},
-\item Simulation digitaler Schaltungen und Bauelemente
+\item Übungen zum Einstieg in die Simulationswelt
+\item Schrittweise Erarbeitung eines Kleinprojektes \newline \textbf{Simulation einer Temperaturmessbrücke}
 \end{itemize}
 
   \end{frame}
   
-\begin{frame}[fragile]{LTSpice XVII - Bitte öffnet alle das Programm}
+\begin{frame}[fragile]{LTspice XVII - Bitte öffnet alle das Programm}
 	
-Die Benutzeroberfläche von LTSpice XVII besteht aus den folgenden Elementen.
-\begin{spacing}{0.6} \begin{tiny} \textbf{Hinweis:} Die Benutzeroberfläche von LTSpice auf MacOS und Windows unterscheided sich leicht. 
+Die Benutzeroberfläche von LTspice XVII besteht aus den folgenden Elementen.
+\begin{spacing}{0.6} \begin{tiny} \textbf{Hinweis:} Die Benutzeroberfläche von LTspice auf MacOS und Windows unterscheided sich leicht. 
   Die Hautpmenuleiste ist für MacO nicht sichtbar.
   \end{tiny} \end{spacing}
 
@@ -111,7 +110,7 @@ Die Benutzeroberfläche von LTSpice XVII besteht aus den folgenden Elementen.
 
   \end{frame}
 
-  \begin{frame}{LTSpice XVII - Überblick Simulationsarten}
+  \begin{frame}{LTspice XVII - Überblick Simulationsarten}
 
     Die Simulationsart kann im Menu \textbf{Simulation Command} konfiguriert werden. 
 
@@ -122,7 +121,7 @@ Die Benutzeroberfläche von LTSpice XVII besteht aus den folgenden Elementen.
     
   \end{frame}
 
-  \begin{frame}{LTSpice XVII - Überblick Simulationsarten}
+  \begin{frame}{LTspice XVII - Überblick Simulationsarten}
 
     \begin{scriptsize}
     \begin{tabular}{ l }
@@ -143,10 +142,10 @@ Die Benutzeroberfläche von LTSpice XVII besteht aus den folgenden Elementen.
       Analyse von Rauschverhalten, Bauteilfehlern oder z.B. EMV Einflüssen\\
       \hline
       \textbf{DC Transfer}\\
-      Nicht Teil des Labors\\
+      Analye der DC-Übertragungsfunktion einer Schaltung\\
       \hline
       \textbf{DC Bias Point}\\
-      Nicht Teil des Labors\\
+      Analyse des Arbeitspunktes einer Schaltung ohne dynamisches Verhalten\\
       \hline
     \end{tabular}
     \end{scriptsize} 
@@ -155,7 +154,7 @@ Die Benutzeroberfläche von LTSpice XVII besteht aus den folgenden Elementen.
   
 \begin{frame}[fragile]{Nützliche Voreinstellungen}	
 
-Die Farbdarstellung von LTSpice kann jederzeit konfiguriert werden. Geht dazu über das 
+Die Farbdarstellung von LTspice kann jederzeit konfiguriert werden. Geht dazu über das 
 \textbf{control panel} Feld, \includegraphics[scale=0.5]{pictures/controlpanel.png} in die Farbeinstellungen
 (\textbf{configure colors}). Hier könnt ihr flexibel die Farbdarstellung konfigurieren.
 
@@ -169,12 +168,12 @@ Die Farbdarstellung von LTSpice kann jederzeit konfiguriert werden. Geht dazu ü
 
 \begin{frame}[t]{Shortkeys}
 	
-Es gibt eine gute Übersicht von HotKeys die die Arbeit mit LTSpice deutlich effektiver macht (nachfolgend sind Hyperlinks embedded).
+Es gibt eine gute Übersicht von HotKeys die die Arbeit mit LTspice deutlich effektiver macht (nachfolgend sind Hyperlinks embedded).
 
 \begin{itemize}
   \item \href{https://www.analog.com/media/en/simulation-models/spice-models/LTspice_ShortcutFlyer.pdf?modelType=spice-models}{Windows ShortKeys}.
   \item \href{https://www.analog.com/media/en/simulation-models/spice-models/LTspiceShortcutsForMacOSX.pdf?modelType=spice-models}{MacOS ShortKeys}.
-  \item \href{https://www.analog.com/media/en/simulation-models/spice-models/LTspiceGettingStartedGuide.pdf?modelType=spice-models}{LTSpice getting started guide}.
+  \item \href{https://www.analog.com/media/en/simulation-models/spice-models/LTspiceGettingStartedGuide.pdf?modelType=spice-models}{LTspice getting started guide}.
 \end{itemize}
 
 \begin{figure}
@@ -192,15 +191,25 @@ Es gibt eine gute Übersicht von HotKeys die die Arbeit mit LTSpice deutlich eff
           (Masse, Ground) angegeben werden,} sonst treten Simulationsfehler auf (Achtung: Es erfolgt
           keine Fehlermeldung!).
   \end{itemize}
+  Achtet darauf die korrekten Suffixe für Einheiten zu verwenden.
 
+  \begin{tabular}{| c | c | c | c | c | c | c | c | c | c |}
+    \hline
+    Terra & Giga & Mega & Kilo & milli & micro & nano & pico & femto \\
+    \hline
+    T & G & Meg & K & m & n & u & p & f \\
+    \hline
+    $e^{12}$ & $e^{9}$ & $e^{6}$ &  $e^{3}$ & $e^{-3}$ & $e^{-6}$ & $e^{-9}$ & $e^{-12}$ & $e^{-15}$\\
+    \hline
+  \end{tabular}
 \end{frame}
   
-\section{Hands-on LTSpice - Das Labor beginnt}
+\section{Hands-on LTspice - Das Labor beginnt}
   
   
 \begin{frame}[fragile]{Vorgehensweise}
 
-  Diese Übungen sind zur interaktiven Arbeit mit LTSpice gedacht. 
+  Diese Übungen sind zur interaktiven Arbeit mit LTspice gedacht. 
   Sie führen von der Aufgabe über den Lösungsansatz bis hin zur fertigen Analyse.
   
   Bitte geht nach den folgenden Schritten vor, um die Übungen strukturiert zu bearbeiten. 
@@ -226,13 +235,12 @@ Sollte es zu Problemen kommen, bitten wir euch uns direkt einen Hinweis zu geben
 \section{Projekt - Temperaturmessbrücke}
 
 \input{messbruecke/einleitung.tex} % einleitung ins projekt
-%\input{messbruecke/brueckenschaltung_op.tex} % Brückenschaltung und OP analyse
-%\input{messbruecke/brueckenschaltung_rt.tex} % Brückenschaltung mit variablen Wiederstand
-%\input{messbruecke/kty_81.tex} % einführung Kty
-%\input{messbruecke/brueckenschaltung_linearisiert.tex} % linearisierung
-%\input{messbruecke/brueckenschaltung_diff_amp.tex} % differenzenverstärker
-%\input{messbruecke/brueckenschaltung_multimeer.tex} % anpassung multineter
-%\input{messbruecke/brueckenschaltung_gesamt.tex} % anpassung multineter
+\input{messbruecke/op_analyse.tex} % Brückenschaltung und OP analyse
+\input{messbruecke/rt_variation.tex} % Brückenschaltung mit variablen Wiederstand
+\input{messbruecke/rt_feedback_1.tex} % Brückenschaltung mit variablen Wiederstand
+\input{messbruecke/rt_kty81.tex} % einführung Kty
+\input{messbruecke/kty81_in_messbruecke.tex} % linearisierung
+\input{messbruecke/abgleich_messbruecke.tex} % differenzenverstärker
 
-
+\input{appendix/real_life_components.tex}
 \end{document} 	
