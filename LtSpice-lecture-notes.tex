@@ -18,7 +18,7 @@
 %create with titlepage
 \title{Labor CAE - Einfuehrung in die Simulation elektrischer
 Schaltungen mit LTspice (6 UE)}
-\date{15.03.2020}
+\date{April 2022}
 \author{Andreas Schaefer - Matthias Holetzko}
 \institute{Duale Hochschule Baden-Württemberg  \newline -- \newline Fakultät Technik \newline Studiengang Mechatronik}
 
@@ -203,17 +203,17 @@ Es gibt eine gute Übersicht von HotKeys die die Arbeit mit LTspice deutlich eff
     \hline
   \end{tabular}
 \end{frame}
-  
+
 \section{Hands-on LTspice - Das Labor beginnt}
-  
-  
+
+
 \begin{frame}[fragile]{Vorgehensweise}
 
-  Diese Übungen sind zur interaktiven Arbeit mit LTspice gedacht. 
+  Diese Übungen sind zur interaktiven Arbeit mit LTspice gedacht.
   Sie führen von der Aufgabe über den Lösungsansatz bis hin zur fertigen Analyse.
-  
+
   Bitte geht nach den folgenden Schritten vor, um die Übungen strukturiert zu bearbeiten. 
-  
+
   \begin{enumerate}
 \item \textbf{Schematic modellieren}
 \item \textbf{Simulationsart analysieren}
@@ -224,14 +224,23 @@ Es gibt eine gute Übersicht von HotKeys die die Arbeit mit LTspice deutlich eff
 Sollte es zu Problemen kommen, bitten wir euch uns direkt einen Hinweis zu geben!
 
   \end{frame}
-  
+
   \section{Übungen}
-  
+
 \input{uebungen/uebung_1.tex}%resistor
 \input{uebungen/uebung_2.tex}%diode
 \input{uebungen/uebung_3.tex}%transistor
 \input{uebungen/uebung_4.tex}%opv-transient, ac, non inverting
-  
+
+\section{Simulation vs. Realität}
+
+\input{experiment/wheatstone_bridge.tex}%opv-transient, ac, non inverting
+
+\section{Verwendung \& Modellierung realer Bauteile}
+
+\input{modellierung/einleitung.tex}
+\input{modellierung/tl072.tex}
+
 \section{Projekt - Temperaturmessbrücke}
 
 \input{messbruecke/einleitung.tex} % einleitung ins projekt
@@ -243,4 +252,4 @@ Sollte es zu Problemen kommen, bitten wir euch uns direkt einen Hinweis zu geben
 \input{messbruecke/abgleich_messbruecke.tex} % differenzenverstärker
 
 \input{appendix/real_life_components.tex}
-\end{document} 	
+\end{document}
