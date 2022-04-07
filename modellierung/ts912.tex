@@ -27,7 +27,7 @@
 
     \begin{scriptsize}
         \begin{enumerate}
-            \item Windows \textbf{LTSpice / lib / sub} 
+            \item Windows \textbf{C:/Users/"USER"/Documents/LTspiceXVII/lib/sub}
             \item MacOS \textbf{/Users/"user"/Library/ApplicationSupport/LTspice/lib/sub}.
         \end{enumerate}
     \end{scriptsize}
@@ -42,10 +42,11 @@
 \begin{frame}[t]{LTSpice Symbol erstellen} 
 
     \begin{enumerate}
-        \item Öffnet LTspice und geht auf New, dann wählt ASCII file
-        \item Kopiert den Inhalt eures Modells und fügt ihr hier ein
-        \item Dann klickt ihr mit der rechtem Maustaste auf den .subckt
-        \item Klickt auf "Create Symbol"
+        \item Öffnet LTspice und öffnet das soeben erstellte File. 
+        \item Mac: More Choices -\> Open Other Type of File
+        \item Windows: Drag and Drop der Datei in LTspice
+        \item Jetzt markiert ihr die Zeile mit dem \textbf{.subckt} klickt ihr mit der rechten Maustaste
+        \item Klickt nun auf "Create Symbol"
     \end{enumerate}
 
 
@@ -75,10 +76,10 @@
 \end{frame}
 
 
-\begin{frame}[t]{LTSpice Symbol modellieren 2} 
+\begin{frame}[t]{LTSpice Symbol modellieren 2}
 
-    Zudem müssen wir in LTspice den Bezug zum subcircuit definieren. Dazu setzt ihr die
-    Variable ModelFile auf unser zuvor gespeichertes File. (TS912.sub)
+    Zudem müssen wir in LTspice den Bezug zum subcircuit definieren. Dazu stellt ihr sicher, dass die
+    Variable ModelFile auf unser zuvor gespeichertes File zeigt. (TS912.sub)
 
     \begin{spacing}{0.9} \begin{tiny}
         \begin{minipage}{\textwidth}
