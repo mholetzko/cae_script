@@ -25,161 +25,161 @@ Schaltungen mit LTspice (8 UE)}
 
 %begin the document
 \begin{document}
-  \maketitle
-  \section{Introduction to LTspice}
-  
-  %slides == frames
-  \begin{frame}{Was ist LTspice - Historisches}
- \textbf{Schaltungssimulation mit LTspice}\newline
- \begin{enumerate}
- \item Viele Programme zur elektrischen Schaltungssimulation beruhen auf einem Spice Kernel
- \item SPICE bedeutet: Simulation Program with Integrated Circuit Emphasis
- \item SPICE wurde 1973 an der University of California at Berkeley. entwickelt
- \item SPICE ist eine “open source” Software (kostenlos)
- \end{enumerate}
- \end{frame}
-  
- \begin{frame}[fragile]{Was ist LTspice - Wie funktioniert eine Simulation?}
-	
-	In einem klassischen SPICE Programm erfolgt die Eingabe der Schaltung über eine
-	Netzliste.
-\begin{center}
-\includegraphics[scale=0.5]{pictures/page1.jpg}
-\end{center}
+\maketitle
+\section{Introduction to LTspice}
 
-	Eine Netzliste repräsentiert eine Schaltung entsprechend Knoten- und Maschenregel. \newline Viele moderne SPICE Simulationsprogramme
-	bieten dem Nutzer jedoch eine grafische Bedienoberfläche. 
-	So auch das in diesem Labor verwendete Programm, \textbf{LTspice XVII}. 
-
-
-  \end{frame}
-  
-   \begin{frame}[fragile]{Was ist LTspice - Installation \& Features}
-	Die folgenden Punkte sind eingebettete Hyperlinks:
-	\begin{enumerate}
-\item \href{https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html}{Hier findet Ihr alle Infos vom Hersteller, \textbf{analog devices}}
-\item \href{http://ltspice.analog.com/software/LTspice.dmg}{Installer fuer MacOs http://ltspice.analog.com/software/LTspice.dmg}
-\item \href{http://ltspice.analog.com/software/LTspiceXVII.exe}{Installer fuer Windows http://ltspice.analog.com/software/LTspiceXVII.exe}
-	\end{enumerate}
-	
-\begin{center}
-
-\includemedia[
-width=0.6\linewidth,height=0.45\linewidth,
-addresource=pictures/LTspiceOverview.mp4, %two video files
-transparent, %transparent player background
-passcontext, %show VPlayer's right-click menu
-flashvars={
-source=pictures/LTspiceOverview.mp4
-}
-]{}{VPlayer.swf}
-
-\end{center} 
+%slides == frames
+\begin{frame}{Was ist LTspice - Historisches}
+  \textbf{Schaltungssimulation mit LTspice}\newline
+  \begin{enumerate}
+    \item Viele Programme zur elektrischen Schaltungssimulation beruhen auf einem Spice Kernel
+    \item SPICE bedeutet: Simulation Program with Integrated Circuit Emphasis
+    \item SPICE wurde 1973 an der University of California at Berkeley. entwickelt
+    \item SPICE ist eine “open source” Software (kostenlos)
+  \end{enumerate}
 \end{frame}
 
- \begin{frame}[fragile]{Ziel dieser Laborübung}
+\begin{frame}[fragile]{Was ist LTspice - Wie funktioniert eine Simulation?}
 
-\begin{enumerate}
-\item Erarbeiten der Grundlagen zur Simulation mit LTspice XVII
-\item Eigenständige Simulation von Schaltungen für Studien-/Abschlussarbeiten
-\item Verständnis theoretischer Inhalte mit empirischen Simulationen ergänzen
-\end{enumerate}
+  In einem klassischen SPICE Programm erfolgt die Eingabe der Schaltung über eine
+  Netzliste.
+  \begin{center}
+    \includegraphics[scale=0.5]{pictures/page1.jpg}
+  \end{center}
 
-\textbf{nächste Schritte}
+  Eine Netzliste repräsentiert eine Schaltung entsprechend Knoten- und Maschenregel. \newline Viele moderne SPICE Simulationsprogramme
+  bieten dem Nutzer jedoch eine grafische Bedienoberfläche.
+  So auch das in diesem Labor verwendete Programm, \textbf{LTspice XVII}.
 
-\begin{itemize}
-\item Übungen zum Einstieg in die Simulationswelt
-\item Schrittweise Erarbeitung eines Kleinprojektes \newline \textbf{Simulation einer Temperaturmessbrücke}
-\end{itemize}
 
-  \end{frame}
-  
+\end{frame}
+
+\begin{frame}[fragile]{Was ist LTspice - Installation \& Features}
+  Die folgenden Punkte sind eingebettete Hyperlinks:
+  \begin{enumerate}
+    \item \href{https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html}{Hier findet Ihr alle Infos vom Hersteller, \textbf{analog devices}}
+    \item \href{http://ltspice.analog.com/software/LTspice.dmg}{Installer fuer MacOs http://ltspice.analog.com/software/LTspice.dmg}
+    \item \href{http://ltspice.analog.com/software/LTspiceXVII.exe}{Installer fuer Windows http://ltspice.analog.com/software/LTspiceXVII.exe}
+  \end{enumerate}
+
+  \begin{center}
+
+    \includemedia[
+      width=0.6\linewidth,height=0.45\linewidth,
+      addresource=pictures/LTspiceOverview.mp4, %two video files
+      transparent, %transparent player background
+      passcontext, %show VPlayer's right-click menu
+      flashvars={
+          source=pictures/LTspiceOverview.mp4
+        }
+    ]{}{VPlayer.swf}
+
+  \end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Ziel dieser Laborübung}
+
+  \begin{enumerate}
+    \item Erarbeiten der Grundlagen zur Simulation mit LTspice XVII
+    \item Eigenständige Simulation von Schaltungen für Studien-/Abschlussarbeiten
+    \item Verständnis theoretischer Inhalte mit empirischen Simulationen ergänzen
+  \end{enumerate}
+
+  \textbf{nächste Schritte}
+
+  \begin{itemize}
+    \item Übungen zum Einstieg in die Simulationswelt
+    \item Schrittweise Erarbeitung eines Kleinprojektes \newline \textbf{Simulation einer Temperaturmessbrücke}
+  \end{itemize}
+
+\end{frame}
+
 \begin{frame}[fragile]{LTspice XVII - Bitte öffnet alle das Programm}
-	
-Die Benutzeroberfläche von LTspice XVII besteht aus den folgenden Elementen
-\begin{spacing}{0.6} \begin{tiny} \textbf{Hinweis:} Die Benutzeroberfläche von LTspice auf MacOS und Windows unterscheided sich leicht. 
-  Die Hautpmenuleiste ist für MacO nicht sichtbar.
-  \end{tiny} \end{spacing}
 
-\begin{figure}
-  \centering
-  \subfloat[Hautpmenuleiste]{\includegraphics[scale=0.6]{pictures/mainmenu.jpg}}\\
-  \subfloat[schematic]{\includegraphics[width=4cm]{pictures/schematic.png}}\qquad    
-  \subfloat[waveform]{\includegraphics[width=4cm]{pictures/waveform.png}}
-\end{figure}
+  Die Benutzeroberfläche von LTspice XVII besteht aus den folgenden Elementen
+  \begin{spacing}{0.6} \begin{tiny} \textbf{Hinweis:} Die Benutzeroberfläche von LTspice auf MacOS und Windows unterscheided sich leicht.
+      Die Hautpmenuleiste ist für MacO nicht sichtbar.
+    \end{tiny} \end{spacing}
 
-  \end{frame}
+  \begin{figure}
+    \centering
+    \subfloat[Hautpmenuleiste]{\includegraphics[scale=0.6]{pictures/mainmenu.jpg}}\\
+    \subfloat[schematic]{\includegraphics[width=4cm]{pictures/schematic.png}}\qquad
+    \subfloat[waveform]{\includegraphics[width=4cm]{pictures/waveform.png}}
+  \end{figure}
 
-  \begin{frame}{LTspice XVII - Überblick Simulationsarten}
+\end{frame}
 
-    Die Simulationsart kann im Menu \textbf{Simulation Command} konfiguriert werden. 
+\begin{frame}{LTspice XVII - Überblick Simulationsarten}
 
-    \begin{figure}
-      \centering
-      \includegraphics[width=10cm]{pictures/simulationcmd.png}
-    \end{figure}
-    
-  \end{frame}
+  Die Simulationsart kann im Menu \textbf{Simulation Command} konfiguriert werden.
 
-  \begin{frame}{LTspice XVII - Überblick Simulationsarten}
+  \begin{figure}
+    \centering
+    \includegraphics[width=10cm]{pictures/simulationcmd.png}
+  \end{figure}
 
-    \begin{scriptsize}
+\end{frame}
+
+\begin{frame}{LTspice XVII - Überblick Simulationsarten}
+
+  \begin{scriptsize}
     \begin{tabular}{ l }
       \hline
-      \textbf{Transient}\\
-      Analyse einer Schaltung \textbf{über die Zeit}, z.B. zur Analyse von Einschwingvorgängen\\
+      \textbf{Transient}                                                                       \\
+      Analyse einer Schaltung \textbf{über die Zeit}, z.B. zur Analyse von Einschwingvorgängen \\
       \hline
-      \textbf{AC Analysis}\\
-      Analyse einer Schaltung \textbf{unter Variantion der Frequenz},\\ z.B. zur Analyse von Grenzfrequenzen\\
+      \textbf{AC Analysis}                                                                     \\
+      Analyse einer Schaltung \textbf{unter Variantion der Frequenz},                          \\ z.B. zur Analyse von Grenzfrequenzen\\
       \hline
-      \textbf{DC Sweep}\\
-      Analyse einer Schaltung \textbf{unter Variation der Spannung},\\ z.B. zur Analyse von Bauteilkennlinien\\
+      \textbf{DC Sweep}                                                                        \\
+      Analyse einer Schaltung \textbf{unter Variation der Spannung},                           \\ z.B. zur Analyse von Bauteilkennlinien\\
       \hline
-      \textbf{Operation Point}\\
-      Analyse des \textbf{Arbeitspunktes} einer Schaltung \textbf{ohne Variantion}\\
+      \textbf{Operation Point}                                                                 \\
+      Analyse des \textbf{Arbeitspunktes} einer Schaltung \textbf{ohne Variantion}             \\
       \hline
-      \textbf{Noise}\\
-      Analyse von Rauschverhalten, Bauteilfehlern oder z.B. EMV Einflüssen\\
+      \textbf{Noise}                                                                           \\
+      Analyse von Rauschverhalten, Bauteilfehlern oder z.B. EMV Einflüssen                     \\
       \hline
-      \textbf{DC Transfer}\\
-      Analye der DC-Übertragungsfunktion einer Schaltung\\
+      \textbf{DC Transfer}                                                                     \\
+      Analye der DC-Übertragungsfunktion einer Schaltung                                       \\
       \hline
-      \textbf{DC Bias Point}\\
-      Analyse des Arbeitspunktes einer Schaltung ohne dynamisches Verhalten\\
+      \textbf{DC Bias Point}                                                                   \\
+      Analyse des Arbeitspunktes einer Schaltung ohne dynamisches Verhalten                    \\
       \hline
     \end{tabular}
-    \end{scriptsize} 
-    
-  \end{frame}
-  
-\begin{frame}[fragile]{Nützliche Voreinstellungen}	
+  \end{scriptsize}
 
-Die Farbdarstellung von LTspice kann jederzeit konfiguriert werden. Geht dazu über das 
-\textbf{control panel} Feld, \includegraphics[scale=0.5]{pictures/controlpanel.png} in die Farbeinstellungen
-(\textbf{configure colors}). Hier könnt ihr flexibel die Farbdarstellung konfigurieren.
+\end{frame}
 
-\begin{figure}
-  \centering
-  \subfloat{\includegraphics[width=5.5cm]{pictures/controlpanel_2.png}}\qquad    
-  \subfloat{\includegraphics[width=3.5cm]{pictures/colorcfg.png}}
-\end{figure}
+\begin{frame}[fragile]{Nützliche Voreinstellungen}
+
+  Die Farbdarstellung von LTspice kann jederzeit konfiguriert werden. Geht dazu über das
+  \textbf{control panel} Feld, \includegraphics[scale=0.5]{pictures/controlpanel.png} in die Farbeinstellungen
+  (\textbf{configure colors}). Hier könnt ihr flexibel die Farbdarstellung konfigurieren.
+
+  \begin{figure}
+    \centering
+    \subfloat{\includegraphics[width=5.5cm]{pictures/controlpanel_2.png}}\qquad
+    \subfloat{\includegraphics[width=3.5cm]{pictures/colorcfg.png}}
+  \end{figure}
 
 \end{frame}
 
 \begin{frame}[t]{Shortkeys}
-	
-Es gibt eine gute Übersicht von HotKeys die die Arbeit mit LTspice deutlich effektiver macht (nachfolgend sind Hyperlinks embedded).
 
-\begin{itemize}
-  \item \href{https://www.analog.com/media/en/simulation-models/spice-models/LTspice_ShortcutFlyer.pdf?modelType=spice-models}{Windows ShortKeys}.
-  \item \href{https://www.analog.com/media/en/simulation-models/spice-models/LTspiceShortcutsForMacOSX.pdf?modelType=spice-models}{MacOS ShortKeys}.
-  \item \href{https://www.analog.com/media/en/simulation-models/spice-models/LTspiceGettingStartedGuide.pdf?modelType=spice-models}{LTspice getting started guide}.
-\end{itemize}
+  Es gibt eine gute Übersicht von HotKeys die die Arbeit mit LTspice deutlich effektiver macht (nachfolgend sind Hyperlinks embedded).
 
-\begin{figure}
-  \centering
-  \includegraphics[scale=0.25]{pictures/shortkeys.png}
-\end{figure}
+  \begin{itemize}
+    \item \href{https://www.analog.com/media/en/simulation-models/spice-models/LTspice_ShortcutFlyer.pdf?modelType=spice-models}{Windows ShortKeys}.
+    \item \href{https://www.analog.com/media/en/simulation-models/spice-models/LTspiceShortcutsForMacOSX.pdf?modelType=spice-models}{MacOS ShortKeys}.
+    \item \href{https://www.analog.com/media/en/simulation-models/spice-models/LTspiceGettingStartedGuide.pdf?modelType=spice-models}{LTspice getting started guide}.
+  \end{itemize}
+
+  \begin{figure}
+    \centering
+    \includegraphics[scale=0.25]{pictures/shortkeys.png}
+  \end{figure}
 
 \end{frame}
 
@@ -188,18 +188,18 @@ Es gibt eine gute Übersicht von HotKeys die die Arbeit mit LTspice deutlich eff
   \begin{itemize}
     \item Zahlenwerte immer mit \textbf{Dezimalpunkt statt Komma eingeben! 3.5 anstatt 3,5!}
     \item SPICE arbeitet nach dem Knotenpotenzialverfahren - \textbf{Es muss immer ein Bezugsknoten
-          (Masse, Ground) angegeben werden,} sonst treten Simulationsfehler auf (Achtung: Es erfolgt
+            (Masse, Ground) angegeben werden,} sonst treten Simulationsfehler auf (Achtung: Es erfolgt
           keine Fehlermeldung!).
   \end{itemize}
   Achtet darauf die korrekten Suffixe für Einheiten zu verwenden.
 
   \begin{tabular}{| c | c | c | c | c | c | c | c | c | c |}
     \hline
-    Terra & Giga & Mega & Kilo & milli & micro & nano & pico & femto \\
+    Terra    & Giga    & Mega    & Kilo    & milli    & micro    & nano     & pico      & femto     \\
     \hline
-    T & G & Meg & K & m & u & n & p & f \\
+    T        & G       & Meg     & K       & m        & u        & n        & p         & f         \\
     \hline
-    $e^{12}$ & $e^{9}$ & $e^{6}$ &  $e^{3}$ & $e^{-3}$ & $e^{-6}$ & $e^{-9}$ & $e^{-12}$ & $e^{-15}$\\
+    $e^{12}$ & $e^{9}$ & $e^{6}$ & $e^{3}$ & $e^{-3}$ & $e^{-6}$ & $e^{-9}$ & $e^{-12}$ & $e^{-15}$ \\
     \hline
   \end{tabular}
 \end{frame}
@@ -212,20 +212,20 @@ Es gibt eine gute Übersicht von HotKeys die die Arbeit mit LTspice deutlich eff
   Diese Übungen sind zur interaktiven Arbeit mit LTspice gedacht.
   Sie führen von der Aufgabe über den Lösungsansatz bis hin zur fertigen Analyse.
 
-  Bitte geht nach den folgenden Schritten vor, um die Übungen strukturiert zu bearbeiten. 
+  Bitte geht nach den folgenden Schritten vor, um die Übungen strukturiert zu bearbeiten.
 
   \begin{enumerate}
-\item \textbf{Schematic modellieren}
-\item \textbf{Simulationsart analysieren}
-\item \textbf{Simulationsart konfigurieren}
-\item \textbf{Ergebnis mit der Vorgabe abgleichen}
-\end{enumerate}
+    \item \textbf{Schematic modellieren}
+    \item \textbf{Simulationsart analysieren}
+    \item \textbf{Simulationsart konfigurieren}
+    \item \textbf{Ergebnis mit der Vorgabe abgleichen}
+  \end{enumerate}
 
-Sollte es zu Problemen kommen, bitten wir euch uns direkt einen Hinweis zu geben!
+  Sollte es zu Problemen kommen, bitten wir euch uns direkt einen Hinweis zu geben!
 
-  \end{frame}
+\end{frame}
 
-  \section{Übungen}
+\section{Übungen}
 
 \input{uebungen/uebung_1.tex}%resistor
 \input{uebungen/uebung_2.tex}%diode
